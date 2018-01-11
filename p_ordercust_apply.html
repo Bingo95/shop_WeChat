@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订货申请</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+	</head>
+
+	<body>
+		<div id="content" class="cont_dispy_none">
+			<div class="weui-cells__title text_size_18 mag_top_5 padding_5 mag_lt_5 text_color_green text">
+				<label>请填写您的申请信息</label>
+			</div>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">客户名称</label></div>
+					<div class="weui-cell__bd">
+						<input id="cust_name" class="weui-input" type="text" placeholder="请输入您的名称" maxlength="50">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系人</label></div>
+					<div class="weui-cell__bd">
+						<input id="cust_con" class="weui-input" type="text" placeholder="请输入联系人" maxlength="50">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系电话</label></div>
+					<div class="weui-cell__bd">
+						<input id="cust_tel" class="weui-input" type="tel" placeholder="请输入手机号" maxlength="11">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系地址</label></div>
+					<div class="weui-cell__bd">
+						<input id="cust_address" class="weui-input" type="text" placeholder="请输入联系地址" maxlength="100">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">备注</label></div>
+					<div class="weui-cell__bd">
+						<input id="cust_others" class="weui-input" type="text" placeholder="请输入备注" maxlength="50">
+					</div>
+				</div>
+			</div>
+			<div class="weui-cells__tips shop_prompt text_color_red text_size_15"></div>
+			<div class="padding_15">
+				<a id="upfrom" href="javascript:;" class="weui-btn weui-btn_primary">递交订货申请</a>
+			</div>
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/p_perporder_pub.js"></script>
+	<script src="js/p_ordercust_apply.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_share.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

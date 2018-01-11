@@ -1,0 +1,75 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>商品管理</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_ordercart_style.css" />
+	</head>
+
+	<body>
+		<!-- 容器 -->
+		<div class="weui-tab">
+			<!--nav-->
+			<div class="weui-navbar posit_flix">
+				<div class="weui-flex width_all">
+					<div class="weui-flex__item">
+						<img class="merchant_nav_back out_homepage" src="img/pub_back.png" />
+					</div>
+					<div class="weui-flex__item uctlist_nav_title">
+						<label class="text_color_black out_homepage">主目录</label>
+					</div>
+					<div class="weui-flex__item">
+						<a id="add_product" class="weui-btn weui-form-preview__btn uctlict_nav_flbtn">新增</a>
+					</div>
+				</div>
+			</div>
+			<div class="uctlict_search_box">
+				<div class="weui-cells" style="padding: 3px 0;">
+					<div class="weui-cell weui-cell_select">
+						<div class="weui-cell__hd">
+							<select class="weui-select weui-select2 prodsort_select" style="margin: 0px 0 0 5px;width:50px;">
+								<option value="-1">全部</option>
+							</select>
+						</div>
+						<div class="weui-search-bar uctlict_search_edit" id="searchBar">
+							<div class="weui-search-bar__form">
+								<div class="weui-search-bar__box">
+									<i class="weui-icon-search"></i>
+									<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="请输入要查找的商品名称" required="">
+									<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+								</div>
+								<label class="weui-search-bar__label" id="searchText">
+      								<i class="weui-icon-search"></i>
+     								<span>请输入要查找的商品名称</span>
+    							</label>
+							</div>
+						</div>
+						<button href="javascript:" class="text_color_green mag_top_8p" id="search_shop">搜索</button>
+					</div>
+				</div>
+			</div>
+			<!--content-->
+			<div class="weui-tab__bd uctlict_cont_mag ">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active productlist_content weui-tab__bd-height" style="margin-top: 6px;">
+					<div id="productlist_content">
+
+					</div>
+					<div id="login_up" class="weui-loadmore">
+						<i class="weui-loading"></i>
+						<span class="weui-loadmore__tips">正在加载</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_productlist.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

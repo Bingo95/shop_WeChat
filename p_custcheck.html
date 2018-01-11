@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订货申请</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css"/>
+	</head>
+
+	<body>
+		<div class="weui-cells__title text_size_18 text_color_green">客户递交的申请信息:</div>
+		<div id="cust_content" class="weui-cells weui-cells_form">
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">客户名称</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input id="cust_name" class="weui-input" type="text">
+				</div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">联系人</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input id="cust_con" class="weui-input" type="text">
+				</div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">联系地址</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input id="cust_address" class="weui-input" type="text">
+				</div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">联系电话</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input id="cust_tel" class="weui-input" maxlength="11" type="tel" placeholder="请输入手机号">
+				</div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd">
+					<label class="weui-label">备注</label>
+				</div>
+				<div class="weui-cell__bd">
+					<input id="cust_others" class="weui-input" type="text">
+				</div>
+			</div>
+			<div class="weui-cell weui-cell_select weui-cell_select-after">
+				<div class="weui-cell__hd">
+					<label for="" class="weui-label text_color_red">客户级别</label>
+				</div>
+				<div class="weui-cell__bd">
+					<select id="price_sort" class="weui-select" name="select2">
+						<option value="1">一星客户</option>
+						<option value="2">二星客户</option>
+						<option value="3">三星客户</option>
+						<!--<option value="4">定价4</option>
+						<option value="5">定价5</option>
+						<option value="6">定价6</option>-->
+					</select>
+				</div>
+			</div>
+
+			<div class="weui-cell weui-cell_select weui-cell_select-after">
+				<div class="weui-cell__hd">
+					<label for="" class="weui-label text_color_red">审核状态</label>
+				</div>
+				<div class="weui-cell__bd">
+					<select id="cust_stat" class="weui-select" name="select2">
+						<option value="1">待审核</option>
+						<option value="0">已通过</option>
+						<option value="2">不通过</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="weui-cells__tips text_color_red text_size_15"></div>
+		<div class="padding_15">
+			<a id="upfrom" href="javascript:;" class="weui-btn weui-btn_primary">保存</a>
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_custcheck.js" type="text/javascript" charset="utf-8"></script>
+</html>

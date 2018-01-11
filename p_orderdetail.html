@@ -1,0 +1,92 @@
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订单明细</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_ordercart_style.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_prod_panel.css" />
+	</head>
+
+	<body>
+		<div class="weui-tab">
+			<!--nav-->
+			<div id="order_nav" class="weui-navbar posit_flix">
+
+			</div>
+			<!--content-->
+			<div class="weui-tab__bd text_size_15 posit_flix width_all">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active">
+					<div class="shop_detail_page">
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<span>订单单号：</span>
+								<label class="text_color_black ordercode text_size_13" style="margin-left: -6px;"></label>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<span>总金额：</span>
+								<label class="mag_lt_5 text_color_black totalmoney" style="margin-left: 4%;"></label>
+								<span>元</span>
+							</div>
+							<div class="weui-flex__item">
+								<span>送货时间：</span>
+								<label class="text_color_black text_size_13 senddate"></label>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<span>收货地址：</span>
+							</div>
+							<div class="weui-flex__item shop_detail_page_lt">
+								<label class="text_color_black text_size_13 receiver_address"></label>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<span>联系人：</span>
+							</div>
+							<div class="weui-flex__item text_color_black text_size_13 shop_detail_page_lt">
+								<label class="receiver_mobile"></label>
+								<label class="receiver_name"></label>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<span>订货备注：</span>
+							</div>
+							<div class="weui-flex__item text_color_black text_size_13 shop_detail_page_lt">
+								<label class="orderothers"></label>
+							</div>
+						</div>
+					</div>
+					<div id="detail_list_content">
+
+					</div>
+					<div class="shop_detail_btn">
+						<a class="weui-btn weui-btn_primary">返回商品目录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--left panel-->
+		<div id="left-panel" class="left_panel-box">
+
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--侧滑-->
+	<script src="js/jquery.panelslider.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_ordercart_panel.js" type="text/javascript" charset="utf-8"></script>
+	<!--ajax-->
+	<script src="js/p_orderdetail.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

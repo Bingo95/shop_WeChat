@@ -1,0 +1,171 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>商品新增</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_ordercart_style.css" />
+	</head>
+
+	<body>
+		<!-- 容器 -->
+		<div class="weui-tab">
+			<!--nav-->
+			<div class="weui-navbar">
+				<div class="weui-flex width_all padding_btm_5p">
+					<div class="weui-flex__item">
+						<img class="merchant_nav_back history_back" src="img/pub_back.png" />
+					</div>
+					<div class="weui-flex__item merchant_nav_title">
+						<label class="mag_lt_-10p">主目录</label>
+					</div>
+				</div>
+			</div>
+			<!--content-->
+			<div class="weui-tab__bd">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active uctadd_box_padding " style="margin-top: -29px;">
+					<div class="weui-cells weui-cells_form text_size_14">
+						<div class="weui-cell">
+							<div class="weui-cell__hd">
+								<label class="weui-label">商品名称</label>
+							</div>
+							<div class="weui-cell__bd">
+								<input id="prodname" class="weui-input" type="text" placeholder="请输入商品名称" maxlength="50">
+							</div>
+						</div>
+						<div class="weui-cells weui-cells_form mag_top_0">
+							<div class="weui-cell text_size_14 top_title">
+								<div class="weui-cell__hd">
+									<label class="weui-label">商品描述</label>
+								</div>
+								<div class="weui-cell__bd">
+									<textarea id="proddes" class="weui-textarea" placeholder="请输入商品描述" rows="3" maxlength="500"></textarea>
+									<div class="weui-textarea-counter">
+										<span class="textarea_num">0</span>/500
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="weui-cell weui-cells_form uctadd_select_box">
+							<div class="weui-cell__hd">
+								<label class="weui-label">商品类型</label>
+							</div>
+							<div class="weui-cell__bd">
+								<input class="prodsort weui-input" type="text" placeholder="选择或输入类型" maxlength="5">
+								<label class="prodsort_id cont_dispy_none"></label>
+							</div>
+							<div class="weui-cell__ft">
+								<select class="prodsort_select" name="select2" style="width: 19px;border: none;">
+									<option value="-1">选择</option>
+								</select>
+							</div>
+						</div>
+						<div class="weui-cell weui-cells_form">
+							<div class="weui-cell__hd">
+								<label class="weui-label">单位</label>
+							</div>
+							<div class="weui-cell__bd">
+								<input class="unit weui-input" type="text" placeholder="选择或输入单位" maxlength="5">
+								<label class="unit_id cont_dispy_none"></label>
+							</div>
+							<div class="weui-cell__ft">
+								<select class="unit_select" name="select2" style="width: 19px;border: none;">
+									<option value="-1">选择</option>
+								</select>
+							</div>
+						</div>
+						<div class="weui-cells weui-cells_form mag_top_0">
+							<div class="weui-cell uctadd_updata_box">
+								<div class="weui-cell__bd">
+									<div class="weui-uploader weui-flex">
+										<div class="weui-flex__item">
+											<label class="text_size_14">图片</label>
+										</div>
+										<div class="weui-flex__item uctadd_img_box">
+											<div id="imgbox" class="weui-uploader__input-box">
+
+												<input id="uploaderInput" class="weui-uploader__input uctadd_img_updata" type="file" accept="image/*" multiple="">
+
+												<img src="" alt="">
+												<canvas></canvas>
+											</div>
+											<a href="javascript:;" class="file">
+												<input id="uploadercamera" type="file" accept="image/*" capture="camera">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="all_price">
+							<div class="weui-cell">
+								<div class="weui-cell__hd">
+									<label class="weui-label">一星客户价</label>
+								</div>
+								<div class="weui-cell__bd">
+									<input id="price1" class="weui-input price" type="text" placeholder="" onkeyup="clearNoNum(this)" />
+								</div>
+							</div>
+							<div class="weui-cell">
+								<div class="weui-cell__hd">
+									<label class="weui-label">二星客户价</label>
+								</div>
+								<div class="weui-cell__bd">
+									<input id="price2" class="weui-input price" type="text" placeholder="" onkeyup="clearNoNum(this)" />
+								</div>
+							</div>
+							<div class="weui-cell">
+								<div class="weui-cell__hd">
+									<label class="weui-label">三星客户价</label>
+								</div>
+								<div class="weui-cell__bd">
+									<input id="price3" class="weui-input price" type="text" placeholder="" onkeyup="clearNoNum(this)" />
+								</div>
+							</div>
+							<!--<div class="weui-flex padding_5 uctadd_price_input">
+								<div class="weui-flex__item">
+									<label>价格1</label>
+									<input type="text" name="" id="price1" value="" class="price" />
+								</div>
+								<div class="weui-flex__item">
+									<label>价格2</label>
+									<input type="text" name="" id="price2" value="" class="price" />
+								</div>
+								<div class="weui-flex__item">
+									<label>价格3</label>
+									<input type="text" name="" id="price3" value="" class="price" />
+								</div>
+							</div>-->
+							<div class="weui-flex uctadd_price_input_two cont_dispy_none">
+								<div class="weui-flex__item">
+									<label>价格4</label>
+									<input type="text" name="" id="price4" value="" class="price" />
+								</div>
+								<div class="weui-flex__item">
+									<label>价格5</label>
+									<input type="text" name="" id="price5" value="" class="price" />
+								</div>
+								<div class="weui-flex__item">
+									<label>价格6</label>
+									<input type="text" name="" id="price6" value="" class="price" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="padding_15">
+						<a id="upfrom" href="javascript:;" class="weui-btn weui-btn_primary">保存</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_productadd.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

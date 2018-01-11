@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+ version="2.5">
+  <servlet>
+    <servlet-name>MiddleP_ERP</servlet-name>
+    <servlet-class>middle.MiddleP_ERP_shop</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MiddleP_ERP2</servlet-name>
+    <servlet-class>middle.MiddleP_ERP2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MiddleP_ERP3</servlet-name>
+    <servlet-class>middle.MiddleP_ERP3</servlet-class>
+  </servlet>
+  
+  
+
+<servlet>
+   <servlet-name>groupbuy</servlet-name>
+   <servlet-class>middle.Middle_groupbuy</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>groupbuy</servlet-name>
+   <url-pattern>/group_buy</url-pattern>
+</servlet-mapping>
+
+  
+  <servlet-mapping>
+    <servlet-name>MiddleP_ERP</servlet-name>
+    <url-pattern>/shop</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>MiddleP_ERP2</servlet-name>
+    <url-pattern>/merchant</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>MiddleP_ERP3</servlet-name>
+    <url-pattern>/pubConfig</url-pattern>
+  </servlet-mapping>
+
+
+
+<servlet>
+   <servlet-name>mprod</servlet-name>
+   <servlet-class>middle.MiddleP_ERP_prod</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>mprod</servlet-name>
+   <url-pattern>/prod</url-pattern>
+</servlet-mapping>
+
+<servlet>
+   <servlet-name>mpsi</servlet-name>
+   <servlet-class>middle.MiddleP_ERP_psi</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>mpsi</servlet-name>
+   <url-pattern>/psi</url-pattern>
+</servlet-mapping>
+
+
+</web-app>

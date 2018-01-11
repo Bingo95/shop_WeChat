@@ -1,0 +1,157 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订单管理</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_ordercart_style.css" />
+	</head>
+
+	<body> 
+		<!-- 容器 -->
+		<div class="weui-tab">
+			<!--nav-->
+			<div class="weui-navbar merchant_nav_fixed">
+				<div class="weui-flex width_all">
+					<div class="weui-flex__item">
+						<img class="merchant_nav_back mian_list" src="img/pub_back.png" />
+					</div>
+					<div class="weui-flex__item merchant_nav_title2 mag_btm_5p mian_list">
+						<label>主目录</label>
+					</div>
+				</div>
+			</div>
+			<!--search-->
+			<div class="merchant_search_style">
+				<div class="weui-cells" style="padding: 3px 0px;">
+					<div class="weui-cell weui-cell_select">
+						<div class="weui-cell__hd text_size_13">
+							<select class="weui-select weui-select2 orderstat_select">
+								<option value="-1">全部</option>
+								<option value="">已确认</option>
+								<!--1-->
+								<!--<option value="0">待确认</option>-->
+							</select>
+						</div>
+						<div class="weui-search-bar morderlist_search_edit" id="searchBar">
+							<div class="weui-search-bar__form">
+								<div class="weui-search-bar__box">
+									<i class="weui-icon-search"></i>
+									<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="请输入要查找的订单单号" required="">
+									<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+								</div>
+								<label class="weui-search-bar__label" id="searchText">
+      								<i class="weui-icon-search"></i>
+     								<span>请输入要查找的订单单号</span>
+    							</label>
+							</div>
+						</div>
+						<button href="javascript:" class="text_color_green" id="search_shop">搜索</button>
+					</div>
+				</div>
+			</div>
+
+			<!--content-->
+			<div class="weui-tab__bd text_size_14 merchant_cont_top">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active morderlist_content mag_top_5 weui-tab__bd-height">
+					<!--<div class="weui-panel merchant_cont">
+						<div class="onclisk">
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<label>宁波精雕软件技术有限公司</label>
+								</div>
+								<div class="float_rt text_size_14">
+									<label>2017083013000280</label>
+
+								</div>
+							</div>
+							<div class="text_size_13">
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<label>订单金额：</label>
+										<label class="text_size_15 text_color_price">86.00</label>
+										<span>元</span>
+										<label class="float_rt merchant_cont_success">已确认</label>
+									</div>
+								</div>
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<label>收货地址：</label>
+									</div>
+									<div class="weui-flex__item morder_list_mag">
+										<label>宁波宁波宁波宁波宁波波</label>
+									</div>
+								</div>
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<label class="float_lt">收货人：</label>
+										<div class="float_lt one_text_mag">
+											<label>12856998745</label>
+											<label>张三</label>
+										</div>
+
+									</div>
+								</div>
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<label>到货时间：</label>
+										<label>2017-07-08</label>
+									</div>
+									<div class="weui-flex__item">
+										<div class="float_rt">
+											<label>2017-07-08 09:10:15</label>
+										</div>
+										<div class="float_rt">
+											<img src="img/ljt.png" class="merchant_cont_user_img" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hide_list morder_list_hide">
+							<div class="morder_list_hide_boder">
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<img src="http://jqweui.com/logo/logo-icon-small.png" class="morder_list_img" />
+									</div>
+									<div class="weui-flex__item morder_list_text">
+										<div class="weui-flex">
+											<label>你好你好你好你好</label>
+										</div>
+										<div class="weui-flex">
+											<label>11111.00</label>
+											<span>元/个</span>
+											<label>x</label>
+											<label>1</label>
+											<span>个</span>
+											<span>=</span>
+											<label>10214.00</label>
+											<span>元</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+-->
+					<div id="morderlist_content">
+
+					</div>
+					<div id="login_up" class="weui-loadmore">
+						<i class="weui-loading"></i>
+						<span class="weui-loadmore__tips">正在加载</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_morder_list.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

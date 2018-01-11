@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>商品搜索</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_orderprodsearch_css.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_prod_panel.css" />
+	</head>
+
+	<body>
+		<!-- 容器 -->
+		<div class="weui-tab">
+			<label id="flag_val" class="cont_dispy_none"></label>
+			<a href="javascript:overlay1();">
+				<div id="overlay" class="weui-popup__overlay weui-popup__overlay_add"></div>
+			</a>
+			<!--nav-->
+			<div class="weui-navbar posit_flix">
+				<div class="weui-flex prod_nav">
+					<div class="float_lt mag_lt_5p">
+						<a id="left-panel-link" href="#left-panel">
+							<img src="img/publist.png" class="pub_list_img" />
+							<div class="prod_nav_text">
+								<img src="" class="prod_nav_img user_heard_img" />
+								<label class="prod_nav_name">个人中心</label>
+							</div>
+						</a>
+					</div>
+					<div class="weui-flex prod_search_shop" style="width: 80%;">
+						<div class="weui-flex__item">
+							<label class="float_rt mag_top_15p panel_company"></label>
+							<div class="float_rt">
+								<label id="shop_count" class="text_color_white text_size_15 shop_count"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="prod_search_box" style="padding: 3px;">
+				<div class="prod_search_box_mag">
+					<div class="weui-search-bar" id="searchBar">
+						<div class="weui-search-bar__form">
+							<div class="weui-search-bar__box">
+								<i class="weui-icon-search"></i>
+								<input type="text" class="weui-search-bar__input" id="searchInput" placeholder="输入你要查找的商品" required="">
+								<a href="javascript:" class="weui-search-bar__cancel-btn weui-icon-clear " id="searchClear"></a>
+							</div>
+							<label class="weui-search-bar__label" id="searchText">
+      							<i class="weui-icon-search"></i>
+     							<span>输入你要查找的商品</span>
+    						</label>
+						</div>
+					</div>
+				</div>
+				<button href="javascript:" class="text_color_green" id="search_shop">搜索</button>
+				<!--<div class="prod_search_shop text_align_center">
+					<div class="prod_search_shop_num">
+						<label id="shop_amount"></label>
+					</div>
+				</div>-->
+			</div>
+			<!--content-->
+			<div class="weui-tab__bd">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active prod_page_mag">
+					<div id="list" class="wrap">
+						<ul id="search_list" class="page_left">
+							<li class="active">全部</li>
+						</ul>
+					</div>
+					<div class="page_right">
+						<!--填充-->
+						<div class="right_div">
+							<!--<div class='prod_cont_box'>
+								<a class='open-popup' data-target='#detail_from'>
+									<div class='weui-flex'>
+										<div class='weui-flex__item text_align_center'>
+											<div class='prod_cont_imgbox'>
+												<img src='http://www.jidisoft.com/image/nopic.jpg' class='prod_cont_img' />
+											</div>
+										</div>
+									</div>
+								</a>
+								<a>
+								<div class='weui-flex'>
+									<div class='prod_cont_name'>
+										<label class='mag_lt_5p'>test</label>
+									</div>
+								</div>
+								<div class='float_lt text_size_12 mag_lt_5p'>
+									详情>
+								</div>
+								<div class='weui-flex mag_top_0 float_rt'>
+									<div class='text_color_gray text_size_12'>
+										￥<label class='text_color_red text_size_13'>9999.00</label>/<span class='cont_dispy_none'></span><span style='margin-right:2px'>aa</span>
+										<div class='id cont_dispy_none'>186</div>
+									</div>
+								</div>
+								</a>
+							</div>-->
+						</div>
+
+						<div id="login_up" class="weui-loadmore float_rt">
+							<i class="weui-loading"></i>
+							<span class="weui-loadmore__tips">正在加载</span>
+						</div>
+						<div class="list_bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--next-->
+		<div id="detail_from" class="weui-popup__container popup-bottom">
+			<a href="javascript:;" class="picker-button close-popup">
+				<div class="weui-popup__overlay"></div>
+			</a>
+			<div class="weui-popup__modal">
+				<div class="prod_next_span">
+					<div class="weui-flex">
+						<label id="prodid" class="cont_dispy_none"></label>
+						<div class="weui-flex__item mag_lt_10p">
+							<span>商品名称:</span>
+							<div class="prod_next_name">
+								<label id="prodname"></label>
+							</div>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item mag_lt_10p">
+							<span>商品描述:</span>
+							<div class="prod_next_depict">
+								<label id="proddes"></label>
+							</div>
+						</div>
+					</div>
+					<div class="weui-flex mag_top_dow10 mag_btm_5p">
+						<div class="weui-flex__item mag_lt_10p">
+							<span>单价:</span>
+							<label id="prodpriceout"></label>
+							<span>元/</span>
+							<span class="cont_dispy_none unit">
+							</span>
+							<span id="unit_val">个</span>
+						</div>
+						<div class="weui-flex__item">
+							<div class="float_lt">
+								<span>数量:</span>
+							</div>
+							<div class="text_align_center">
+								<div class="float_rt mag_rt_5p" style="width: 23px;">
+									<label class="btn_add">+</label>
+								</div>
+
+								<div class="float_rt" style="width:30%">
+									<input id="amount" type="text" value="1" class="prod_next_num" onkeyup="clearNoNum(this)" />
+								</div>
+								<div class="float_rt" style="width: 20px;">
+									<label class="btn_minus">-</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="weui-flex mag_btm_10p">
+						<div class="weui-flex__item mag_lt_10p">
+							<span>金额:</span>
+							<label id="totalmoney"></label>
+
+							<span>元</span>
+						</div>
+					</div>
+					<label class="cont_dispy_none img_url"></label>
+					<div class="weui-form-preview__ft">
+						<a class="weui-form-preview__btn weui-form-preview__btn_default btn_end">立即下单</a>
+						<a class="weui-form-preview__btn weui-form-preview__btn_primary btn_addone">加入订货车</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--left panel-->
+		<div id="left-panel" class="left_panel-box">
+			<div class='weui-flex'>
+				<div class='weui-flex__item left_panel_userbox'>
+					<div class='left_panel_headbox'>
+						<img src='' class='left_panel_head user_heard_img' />
+					</div>
+					<div class='left_panel_username'>
+						<label id='user_name_text'></label>
+					</div>
+				</div>
+			</div>
+			<div class='weui-flex'>
+				<ul>
+					<a id="orderprordsearch_a" href=''>
+						<li>商品目录</li>
+					</a>
+					<a id="prod_search_shop">
+						<li>我的订货车<span class="myshop_num"></span></li>
+					</a>
+					<a id="orderlist_a" href=''>
+						<li>我的订单</li>
+					</a>
+					<a id="ordermanlist_a" class="cont_dispy_none" href=''>
+						<li>订货人员</li>
+					</a>
+					<a id="ordercust_a" class="cont_dispy_none" href=''>
+						<li>+订货人员</li>
+					</a>
+					<li id='panel_close'>隐藏目录 </li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.panelslider.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/p_perporder_pub.js"></script>
+	<!--<script src="js/p_ordercart_panel.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/p_orderprodsearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_share.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

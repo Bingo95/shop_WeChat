@@ -1,0 +1,138 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订货车</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_ordercart_style.css" />
+	</head>
+	<style type="text/css">
+		.picker-calendar-month-picker a.icon-only,
+		.picker-calendar-year-picker a.icon-only {
+			min-width: 36px;
+			float: left;
+			width: 25%;
+			height: 1.2rem;
+			margin-top: 15px;
+			line-height: 2.2rem;
+		}
+	</style>
+
+	<body>
+		<!--tab-->
+		<div class="weui-tab">
+			<!--nav-->
+			<div class="weui-navbar merchant_nav_fixed">
+				<div class="weui-flex width_all mag_btm_5p">
+					<div class="weui-flex__item">
+						<img class="merchant_nav_back" src="img/pub_back.png" />
+					</div>
+					<div class="weui-flex__item">
+						<a id="shop_empty" class="shop_empty_text">清空</a>
+					</div>
+				</div>
+			</div>
+			<!--list--> 
+			<div class="weui-tab__bd">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active mag_top_-15p">
+					<!--填充-->
+					<div class="shop_list_content shop_list_show">
+ 
+					</div>
+				</div>
+			</div>
+			<!--tabbar-->
+			<div class="weui-tabbar">
+				<div class="weui-flex">
+					<div class="weui-flex__item mag_auto text_color_black">
+						<div class="shop_btn_next_cont mag_lt_5">
+							<label>总金额：</label>
+							<label class="totalmoney_all">0</label>
+							<span class="text_color_gray text_size_13">元</span>
+						</div>
+					</div>
+				</div>
+				<span class="weui-tabbar__item"></span>
+				<div class="weui-form-preview__ft">
+					<a id="shop_next_from" class="weui-form-preview__btn weui-form-preview__btn_primary shop_btn_next">下一步（<span id="sum_list">0</span>）</a>
+				</div>
+			</div>
+		</div>
+		<!--next-->
+		<div id="shop_next_page" class="weui-popup__container">
+			<div class="weui-popup__overlay"></div>
+			<div class="weui-popup__modal">
+				<div class="weui-panel">
+					<div class="weui-media-box">
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<label class="weui-form-preview__label text_size_17">总金额：</label>
+								<div class="weui-form-preview__value"><span id="totalmoney">0</span><span class="text_color_gray text_size_13 text_mag_lt_add5">元</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="weui-cells weui-cells_form">
+						<div class="weui-cell">
+							<div class="weui-cell__hd">
+								<label class="weui-label text_color_gray">送货时间</label>
+							</div>
+							<div class="weui-cell__bd">
+								<input class="senddate weui-input" id="senddate" type="text" readonly="">
+							</div>
+							<button class="float_rt time_del">X</button>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__hd">
+								<label class="weui-label text_color_gray">收货地址</label>
+							</div>
+							<div class="weui-cell__bd">
+								<input id="cust_address" class="weui-input" type="text" maxlength="100">
+							</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__hd">
+								<label class="weui-label text_color_gray">联系人</label>
+							</div>
+							<div class="weui-cell__bd">
+								<input id="cust_name" class="weui-input" type="text" maxlength="30">
+							</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__hd">
+								<label class="weui-label text_color_gray">联系电话</label>
+							</div>
+							<div class="weui-cell__bd">
+								<input id="cust_tel" class="weui-input" type="tel" maxlength="30">
+							</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__hd">
+								<label class="weui-label text_color_gray">订货备注</label>
+							</div>
+							<div class="weui-cell__bd">
+								<input id="cust_con" class="weui-input" type="text" placeholder="" maxlength="200">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weui-flex">
+					<div class="weui-flex__item padding_15">
+						<a id="save_all" class="weui-btn weui-btn_primary">提交</a>
+					</div>
+					<div class="weui-flex__item padding_15">
+						<a id="exit" class="weui-btn weui-btn_default close-popup">返回</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/p_perporder_pub.js"></script>
+	<script src="js/p_ordercart.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

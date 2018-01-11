@@ -1,0 +1,52 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的订单</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_ordercart_style.css" />
+		<!--侧滑-->
+		<link rel="stylesheet" type="text/css" href="css/p_prod_panel.css" />
+	</head>
+
+	<body>
+		<!-- 容器 -->
+		<div class="weui-tab">
+			<!--nav-->
+			<div id="order_nav" class="weui-navbar posit_flix">
+			</div>
+			<!--content-->
+			<div class="weui-tab__bd text_size_15 width_all posit_flix">
+				<div  class="weui-tab__bd-item weui-tab__bd-item--active orderlist_content">
+					<div class="weui-panel shop_cont"style="margin-top: -5px;">
+						
+					</div>
+					<div id="orderlist_content">
+						
+					</div>
+					<div id="login_up" class="weui-loadmore">
+						<i class="weui-loading"></i>
+						<span class="weui-loadmore__tips">正在加载</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--left panel-->
+		<div id="left-panel" class="left_panel-box">
+
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_pub.js" type="text/javascript" charset="utf-8"></script>
+	<!--侧滑-->
+	<script src="js/jquery.panelslider.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_ordercart_panel.js"></script>
+	<!--ajax-->
+	<script src="js/p_orderlist.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

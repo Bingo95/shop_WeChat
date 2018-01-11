@@ -1,0 +1,130 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_ordercart_style.css" />
+		<!--侧滑-->
+		<link rel="stylesheet" type="text/css" href="css/p_prod_panel.css" />
+	</head>
+
+	<body>
+		<!-- 容器 -->
+		<div class="weui-tab">
+			<!--nav-->
+			<div id="order_nav" class="weui-navbar posit_flix">
+			</div>
+			<!--content-->
+			<div class="weui-tab__bd width_all posit_flix">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active">
+					<div class="shop_img_box">
+						<img id="detail_banner" src="" class="banner_style" />
+					</div>
+					<div class="shop_contact_style text_align_left">
+						<div class="weui-flex mag_btm_5p">
+							<div class="weui-flex__item">
+								<label id="prodname" class="text_size_16 mag_btm_5p"></label>
+							</div>
+							<span class="mag_top_5">￥</span><label id="prodpriceout" class="text_color_red text_size_16">0.00</label><span id="unit_val" class="mag_top_5"></span>
+						</div>
+						<label id="proddes" class="text_color_gray text_size_15"></label>
+					</div>
+				</div>
+			</div>
+			<!--tabbar-->
+			<div class="weui-tabbar posit_flix" style="z-index: 9;">
+				<div class="weui-form-preview width_all">
+					<div class="weui-form-preview__ft">
+						<a class="weui-form-preview__btn weui-form-preview__btn_default prod_detail_out out_back">返回</a>
+						<a type="submit" data-target='#detail_from' class="open-popup weui-form-preview__btn weui-form-preview__btn_primary prod_detail_next" href="javascript:">订货</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--next-->
+		<div id="detail_from" class="weui-popup__container popup-bottom" style="z-index: 999;">
+			<a href="javascript:;" class="picker-button close-popup">
+				<div class="weui-popup__overlay"></div>
+			</a>
+			<div class="weui-popup__modal">
+				<div class="prod_next_span">
+					<div class="weui-flex">
+						<label id="prodid" class="cont_dispy_none"></label>
+						<div class="weui-flex__item mag_lt_10p">
+							<span>商品名称:</span>
+							<div class="prod_next_name">
+								<label id="prodname2"></label>
+							</div>
+						</div>
+					</div>
+					<div class="weui-flex">
+						<div class="weui-flex__item mag_lt_10p">
+							<span>商品描述:</span>
+							<div class="prod_next_depict">
+								<label id="proddes2"></label>
+							</div>
+						</div>
+					</div>
+					<div class="weui-flex mag_top_dow10 mag_btm_5p">
+						<div class="weui-flex__item mag_lt_10p">
+							<span>单价:</span>
+							<label id="prodpriceout2"></label>
+							<span>元/</span>
+							<span class="cont_dispy_none unit">
+							</span>
+							<span id="unit_val2">个</span>
+						</div>
+						<div class="weui-flex__item">
+							<div class="float_lt">
+								<span>数量:</span>
+							</div>
+							<div class="text_align_center">
+								<div class="float_rt mag_rt_5p" style="width: 23px;">
+									<label class="btn_add">+</label>
+								</div>
+
+								<div class="float_rt" style="width:30%">
+									<input id="amount" type="text" value="1" class="prod_next_num" onkeyup="clearNoNum(this)" />
+								</div>
+								<div class="float_rt" style="width: 20px;">
+									<label class="btn_minus">-</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="weui-flex mag_btm_10p">
+						<div class="weui-flex__item mag_lt_10p">
+							<span>金额:</span>
+							<label id="totalmoney"></label>
+
+							<span>元</span>
+						</div>
+					</div>
+					<label class="cont_dispy_none img_url"></label>
+					<div class="weui-form-preview__ft">
+						<a class="weui-form-preview__btn weui-form-preview__btn_default btn_end">立即下单</a>
+						<a class="weui-form-preview__btn weui-form-preview__btn_primary btn_addone">加入订货车</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--left panel-->
+		<div id="left-panel" class="left_panel-box">
+
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_pub.js" type="text/javascript" charset="utf-8"></script>
+	<!--侧滑-->
+	<script src="js/jquery.panelslider.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_ordercart_panel.js"></script>
+	<!--ajax-->
+	<script src="js/p_orderproddetail.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

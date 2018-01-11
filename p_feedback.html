@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>客户反馈</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+	</head>
+
+	<body>
+		<div class="weui-tab">
+			<!--nav-->
+			<div class="weui-navbar posit_flix z-index_0">
+				<div class="weui-flex width_all">
+					<label class="padding_10p text_color_green">请输入您的反馈信息</label>
+				</div>
+			</div>
+			<!--content-->
+			<div class="weui-tab__bd">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active">
+					<div class="weui-cells weui-cells_form mag_top_0">
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<textarea id="feedback_content" class="weui-textarea" placeholder="反馈内容" rows="3" maxlength="200"></textarea>
+								<div class="weui-textarea-counter"><span class="textarea_num">0</span>/200</div>
+							</div>
+						</div>
+					</div>
+					<div class="weui-cells__title mag_top_dow10"></div>
+					<div class="weui-cells">
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<input id="user_tel" class="weui-input" type="tel" pattern="[0-9]*" maxlength="11" placeholder="联系手机">
+							</div>
+						</div>
+					</div>
+					<div class="padding_15">
+						<a id="send_data" href="javascript:;" class="weui-btn weui-btn_primary">发送</a>
+						<a id="send_data" href="javascript:;" class="weui-btn weui-btn_default win_close">关闭</a>
+					</div>
+				</div>
+			</div>
+			<div id="popup_end" class="weui-popup__container">
+				<div class="weui-popup__overlay"></div>
+				<div class="weui-popup__modal text_align_center">
+					<div class="mag_top_20">
+						<img src="img/120.png" class="mag_btm_10p"/>
+						<label class="dispy_block mag_top_15p">感谢您对“来订货”系统的反馈!</label>
+						<div class="padding_15 mag_top_15p mag_top_100p">
+							<a class="weui-btn weui-btn_default win_close">关闭</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_feedback.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

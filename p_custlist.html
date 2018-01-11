@@ -1,0 +1,87 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>客户管理</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="css/p_ordercart_style.css" />
+	</head>
+	<style type="text/css">
+		.weui-cell_select .weui-select {
+			padding-right: 0px;
+		}
+	</style>
+
+	<body>
+		<!-- 容器 -->
+		<div class="weui-tab">
+			<!--nav-->
+			<div class="weui-navbar merchant_nav_fixed">
+				<div class="weui-flex width_all">
+					<div class="weui-flex__item">
+						<img class="merchant_nav_back out_homepage" src="img/pub_back.png" />
+					</div>
+					<div class="weui-flex__item merchant_nav_title mag_btm_5p">
+						<label>主目录</label>
+					</div>
+				</div>
+			</div>
+			<!--search-->
+			<div class="merchant_search_style">
+				<div class="weui-cells" style="padding: 3px 0px;">
+					<div class="weui-cell weui-cell_select">
+						<div class="weui-cell__hd text_size_13">
+							<select class="weui-select weui-select2 price_stat_select" style="width: 50px;">
+								<option value="-1">全部</option>
+								<option value="0">待定价</option>
+								<option value="1">一星客户</option>
+								<option value="2">二星客户</option>
+								<option value="3">三星客户</option>
+								<!--<option value="4">定价4</option>
+								<option value="5">定价5</option>
+								<option value="6">定价6</option>-->
+							</select>
+						</div>
+						<div class="weui-search-bar morderlist_search_edit" id="searchBar">
+							<div class="weui-search-bar__form">
+								<div class="weui-search-bar__box">
+									<i class="weui-icon-search"></i>
+									<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="输入你要查找的客户" required="">
+									<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+								</div>
+								<label class="weui-search-bar__label" id="searchText">
+      								<i class="weui-icon-search"></i>
+     								<span>输入你要查找的客户</span>
+    							</label>
+							</div>
+						</div>
+						<button href="javascript:" class="text_color_green" id="search_shop">搜索</button>
+					</div>
+				</div>
+			</div>
+
+			<!--content-->
+			<div class="weui-tab__bd text_size_14 merchant_cont_top">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active custlist_content mag_top_5">
+					<div id="custlist_content">
+						
+								
+					</div>
+					<div id="login_up" class="weui-loadmore">
+						<i class="weui-loading"></i>
+						<span class="weui-loadmore__tips">正在加载</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_perporder_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/p_custlist.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
